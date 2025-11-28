@@ -1,0 +1,416 @@
+/* Team Space */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    margin-bottom: 32px;
+}
+
+.team-card {
+    background-color: var(--white);
+    border-radius: var(--radius);
+    padding: 24px;
+    box-shadow: var(--shadow);
+    text-align: center;
+}
+
+.team-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: var(--primary);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.team-card h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.team-role {
+    color: var(--primary);
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.team-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 16px;
+    font-size: 14px;
+    color: var(--secondary);
+}
+
+@media (max-width: 768px) {
+    .profile-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .action-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Team Discussion Forum Styles */
+.team-discussion-section {
+    margin-top: 40px;
+    background-color: var(--white);
+    border-radius: var(--radius);
+    padding: 24px;
+    box-shadow: var(--shadow);
+}
+
+.discussion-preview {
+    border: 1px solid var(--gray-light);
+    border-radius: var(--radius);
+    padding: 16px;
+    background-color: var(--light);
+    margin-bottom: 16px;
+}
+
+.discussion-messages {
+    height: 150px;
+    overflow-y: auto;
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-right: 8px;
+}
+
+.discussion-message {
+    padding: 8px 12px;
+    border-radius: 12px;
+    max-width: 80%;
+    animation: fadeIn 0.3s ease;
+}
+
+.user-message {
+    background-color: var(--primary);
+    color: white;
+    align-self: flex-end;
+    margin-left: auto;
+}
+
+.team-message {
+    background-color: var(--white);
+    color: var(--dark);
+    align-self: flex-start;
+    border: 1px solid var(--gray-light);
+}
+
+.discussion-message .message-sender {
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.user-message .message-sender {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.team-message .message-sender {
+    color: var(--primary);
+}
+
+.discussion-message .message-text {
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.discussion-input-container {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.discussion-input {
+    flex: 1;
+    padding: 10px 16px;
+    border: 1px solid var(--gray-light);
+    border-radius: 20px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.discussion-input:focus {
+    border-color: var(--primary);
+}
+
+.btn-send-discussion {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn-send-discussion:hover {
+    background-color: var(--primary-dark);
+    transform: scale(1.05);
+}
+
+.discussion-actions {
+    display: flex;
+    justify-content: center;
+}
+
+/* Full Team Discussion Styles */
+.team-discussion-full {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 120px);
+    background-color: var(--white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+
+.discussion-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 24px;
+    border-bottom: 1px solid var(--gray-light);
+    background-color: var(--white);
+}
+
+.discussion-header .section-title {
+    margin: 0;
+}
+
+.team-members-list {
+    padding: 16px 24px;
+    border-bottom: 1px solid var(--gray-light);
+    background-color: var(--light);
+}
+
+.team-members-list h4 {
+    margin-bottom: 12px;
+    font-size: 14px;
+    color: var(--secondary);
+}
+
+.participants {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.participant {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.participant-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: var(--primary);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.discussion-messages-full {
+    flex: 1;
+    overflow-y: auto;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.discussion-message-full {
+    padding: 16px;
+    border-radius: 12px;
+    max-width: 70%;
+    animation: fadeIn 0.3s ease;
+}
+
+.user-message-full {
+    background-color: var(--primary);
+    color: white;
+    align-self: flex-end;
+    margin-left: auto;
+}
+
+.team-message-full {
+    background-color: var(--light);
+    color: var(--dark);
+    align-self: flex-start;
+    border: 1px solid var(--gray-light);
+}
+
+.message-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.message-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: var(--primary);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.user-message-full .message-avatar {
+    background-color: white;
+    color: var(--primary);
+}
+
+.message-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.message-sender-full {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.message-time-full {
+    font-size: 11px;
+    opacity: 0.7;
+}
+
+.user-message-full .message-sender-full,
+.user-message-full .message-time-full {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.team-message-full .message-sender-full {
+    color: var(--primary);
+}
+
+.message-text-full {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.discussion-input-full-container {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    padding: 16px 24px;
+    border-top: 1px solid var(--gray-light);
+    background-color: var(--white);
+}
+
+.discussion-input-full {
+    flex: 1;
+    padding: 12px 20px;
+    border: 1px solid var(--gray-light);
+    border-radius: 24px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.discussion-input-full:focus {
+    border-color: var(--primary);
+}
+
+.btn-send-discussion-full {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 24px;
+    padding: 12px 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-send-discussion-full:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-1px);
+}
+
+/* Scrollbar styling */
+.discussion-messages::-webkit-scrollbar,
+.discussion-messages-full::-webkit-scrollbar {
+    width: 6px;
+}
+
+.discussion-messages::-webkit-scrollbar-track,
+.discussion-messages-full::-webkit-scrollbar-track {
+    background: var(--gray-light);
+    border-radius: 3px;
+}
+
+.discussion-messages::-webkit-scrollbar-thumb,
+.discussion-messages-full::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 3px;
+}
+
+.discussion-messages::-webkit-scrollbar-thumb:hover,
+.discussion-messages-full::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-dark);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .team-discussion-full {
+        height: calc(100vh - 100px);
+    }
+
+    .discussion-header {
+        padding: 12px 16px;
+    }
+
+    .team-members-list {
+        padding: 12px 16px;
+    }
+
+    .discussion-messages-full {
+        padding: 16px;
+    }
+
+    .discussion-input-full-container {
+        padding: 12px 16px;
+    }
+
+    .discussion-message-full {
+        max-width: 85%;
+    }
+    
+    .participants {
+        gap: 12px;
+    }
+}
